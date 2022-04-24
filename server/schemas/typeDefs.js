@@ -13,6 +13,14 @@ type Mutation {
     saveBook(input: SavedBookInput): User
     removeBook(bookId: String!): User
 }
+
+type User {
+    _id: ID
+    username: String!
+    email: String!
+    bookCount: Int
+    savedBooks: [Book]
+}
 `;
 
 // export the typeDefs
