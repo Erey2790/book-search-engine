@@ -11,15 +11,13 @@ A fully functioning Google Books API search engine built with a RESTful API, and
 
 ## Badges
 
-Add badges from somewhere like: [shields.io](https://shields.io/)
-
 [![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs)
 
 
 
 ## Screenshots
+![mern project](https://user-images.githubusercontent.com/90116580/165062838-f645aecb-0012-4840-828e-ed6f48cb514d.PNG)
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
 
 
 ## Deployment
