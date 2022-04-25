@@ -1,3 +1,4 @@
+const { throwHttpGraphQLError } = require('apollo-server-core/dist/runHttpQuery');
 const { AuthenticationError } = require('apollo-server-express');
 const { Book, User } = require('../models')
 const { signToken } = require('../utils/auth')
@@ -47,6 +48,19 @@ const resolvers = {
 
             return { token, user };     
         }
+    },
+
+    saveBook: async (parent, args, context) => {
+        if (context.user) {
+            const newUser = await User.findByIdAndUpdate(
+                { _id: context.user._id },
+                { $addToSet: { savedBooks: args.input  }},
+                { new: true }
+            );
+
+            return newUser;
+        }
+        throw new AuthenticationError('you need to be logged in!')
     }
 }
 
