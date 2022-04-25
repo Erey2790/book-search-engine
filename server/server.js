@@ -34,7 +34,7 @@ const startServer = async () => {
 };
 
 // Initialize the Apollo server
-startServer();
+// startServer();
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
